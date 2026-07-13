@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen items-center ">
       <NavBar/>
-      <main className="flex-1 max-w-7xl">
+      <main className="flex-1 max-w-7xl w-full ">
         <Outlet/>
       </main>
       <Footer/>
