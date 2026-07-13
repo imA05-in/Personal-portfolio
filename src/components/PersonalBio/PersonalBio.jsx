@@ -17,7 +17,7 @@ export default function PersonalBio({
         />
       </div>
       {/* heading  */}
-      <div className="font-extrabold text-2xl">{heading}</div>
+      <h1 className="font-extrabold text-2xl">{heading}</h1>
       {/* intro */}
       <div className="font-medium flex flex-col gap-2 text-justify">
         <div className="flex ">{introPrimary}</div>
