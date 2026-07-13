@@ -15,9 +15,6 @@ export default function NavBar() {
         {/* desktop menu */}
         <div className="items-center justify-between hidden md:flex md:gap-10 lg:gap-20 py-2">
           <div>Case studies</div>
-          {navItems.map((item) => (
-            <div>{item.label}</div> //add navlink
-          ))}
           <div>
             <ContactBtn
               href="mailto:abhishek29112005@gmail.com"
@@ -42,9 +39,6 @@ export default function NavBar() {
         className={`${showMobMenu === true ? "flex flex-col" : "hidden"} md:hidden gap-4 items-end px-2 py-4`}
       >
         <div>Case studies</div>
-        {navItems.map((item) => (
-          <div>{item.label}</div> //add navlink
-        ))}
         <div>
           <ContactBtn
             href="mailto:abhishek29112005@gmail.com"
