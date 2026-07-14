@@ -7,7 +7,7 @@ export default function PersonalBio({
   introSecondary,
 }) {
   return (
-    <div className="w-full px-2 py-1 flex flex-col gap-4">
+    <div className="w-full py-1 flex flex-col gap-4">
       {/* Profile Image */}
       <div className="rounded-full">
         <img
