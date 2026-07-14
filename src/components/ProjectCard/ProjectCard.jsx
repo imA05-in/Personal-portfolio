@@ -8,7 +8,7 @@ export default function ProjectCard({thumbnail = ProjThmbn, title = "Title", des
                 <img src={ProjThmbn} alt="" className="rounded" />
             </div>
             {/* desciption */}
-            <div className="flex flex-col justify-between p gap-2">
+            <div className="flex flex-col justify-between py-2 md:px-4 gap-2">
                 {/* title */}
                 <div className="font-medium text-lg">
                     {title}
