@@ -4,6 +4,10 @@ import useGitData from "../../hooks/useGitData"
 
 export default function Content(){
     const data = useGitData({ user: "imA05-in" })
+    // filter unwanted
+    const unwantedProjs = ["07BasicSite","08contextApi","10TodoContextLocal","OAuth2","ThemeSwitcher"]
+    const newData = data.filter((item)=>!unwantedProjs.includes(item.name))
+    
 
   return (
     <div className="flex flex-col gap-10 w-full px-2">
@@ -16,7 +20,7 @@ export default function Content(){
       {/* work */}
       <div className="flex flex-col gap-10 ">
         <h2 className="font-medium text-xl">Work</h2>
-        {data.map((item) => (
+        {newData.map((item) => (
           <div key={item.name} className="pt-6">  {/* filter unwanted projects */}
             <ProjectCard
               title={item.name}
