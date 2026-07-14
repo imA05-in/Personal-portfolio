@@ -38,12 +38,14 @@ export default function NavBar() {
       <div
         className={`${showMobMenu === true ? "flex flex-col" : "hidden"} md:hidden gap-4 items-end px-2 py-4`}
       >
-        <div>Case studies</div>
+        <div onClick={()=>(setShowMobMenu(false), document.getElementById("work").scrollIntoView({behavior:"smooth"}))}  >Case studies</div>
         <div>
           <ContactBtn
             href="mailto:abhishek29112005@gmail.com"
             target="_blank"
             label="Let's work together"
+            onclick={()=>setShowMobMenu(false)}
+            
           />
         </div>
       </div>

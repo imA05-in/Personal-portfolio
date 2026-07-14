@@ -3,7 +3,7 @@ import {Button, Content, Footer, Hero, ImageBlock, NavBar, PersonalBio, ProjectC
 import {Outlet} from "react-router"
 function App() {
   return (
-    <div className="flex flex-col min-h-screen items-center ">
+    <div className="flex flex-col min-h-screen items-center bg-[#FFFDFB]">
       <NavBar/>
       <main className="flex-1 max-w-7xl w-full ">
         <Outlet/>
