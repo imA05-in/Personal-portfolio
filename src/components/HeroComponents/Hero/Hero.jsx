@@ -1,4 +1,4 @@
-import HeroImg from "../../../screenshots/0.png"
+import HeroImg from "../../../../screenshots/0.png"
 
 export default function Hero({ Himg = HeroImg, text="Hero text" }) {
   return (
