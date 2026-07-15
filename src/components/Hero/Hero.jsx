@@ -1,6 +1,6 @@
-import Heroimg from "../../../screenshots/0.png";
+import HeroImg from "../../../screenshots/0.png"
 
-export default function Hero({ Himg = Heroimg, text="Hero text" }) {
+export default function Hero({ Himg = HeroImg, text="Hero text" }) {
   return (
     <div className="relative">
       <img
