@@ -8,6 +8,7 @@ import PersonalBio from "./PersonalBio/PersonalBio.jsx"
 import ProjectCard from "./ProjectCard/ProjectCard"
 import SkillList from "./SkillList/SkillList"
 import ContactBtn from "./ContactBtn/ContactBtn.jsx"
+import GithubBtn from "./GithubBtn/GithubBtn.jsx"
 
 export {
     Button,
@@ -20,5 +21,6 @@ export {
     ProjectCard,
     SkillList,
     ContactBtn,
+    GithubBtn
 
 }
