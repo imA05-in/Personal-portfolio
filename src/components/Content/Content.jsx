@@ -32,14 +32,15 @@ export default function Content() {
       />
 
       {/* work */}
-      <div className="flex flex-col gap-10 ">
+      <div className="flex flex-col gap-10">
         <h2 className="font-medium text-xl">Work</h2>
         {newData.map((item) => (
-          <div key={item.name} className="pt-6">
+          <div key={item.name} className="pt-6 w-full">
             <ProjectCard
               title={item.name}
               btnLable={item.name}
               description={item.description}
+              gitLink={item.html_url}
             />
           </div>
         ))}
