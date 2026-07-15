@@ -1,19 +1,13 @@
 import { Button } from "../index";
 import ProjThmbn from "../../assets/images/projThumbnail.png";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router";
 export default function ProjectCard({
   thumbnail = ProjThmbn,
   title = "Title",
   description = "Lorem",
   btnLable,
 }) {
-
-    // const [imageUrl, setImageUrl] = useState("")
-    // useEffect(()=>{
-    //     fetch(`https://api.github.com/repos/imA05-in/${title}/contents/screenshots/0.png`)
-    //     // .then(res => res.json())
-        
-    // },[title])
 
   return (
     <div className="flex md:flex-row flex-col gap-2">
@@ -27,9 +21,11 @@ export default function ProjectCard({
         <div className="font-medium text-lg">{title}</div>
         {/* description */}
         <div className="project description">{description}</div>
-        <div>
+        <NavLink
+        to={`/${title}`}
+        >
           <Button label={btnLable} classname="" />
-        </div>
+        </NavLink>
       </div>
     </div>
   );
