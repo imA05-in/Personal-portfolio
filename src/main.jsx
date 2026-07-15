@@ -4,6 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import Home from "./pages/Home.jsx"
 import {createBrowserRouter, RouterProvider} from "react-router"
+import Project from './pages/Project.jsx'
+import { useParams } from 'react-router'
+import {Provider} from "react-redux"
+import {store} from "./store/store.js"
 
 const router = createBrowserRouter([
   {
@@ -14,7 +18,10 @@ const router = createBrowserRouter([
         index:true,
         element:<Home/>
       },
-      //configure for auto project(multiple pages) routing
+      {
+        path:"/:slug",
+        element:<Project/>
+      }
     ]
   },
   
@@ -22,5 +29,7 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
   <RouterProvider router={router}/>
+  </Provider>
 )
