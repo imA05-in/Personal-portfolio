@@ -1,5 +1,8 @@
 import { PersonalBio, ProjectCard } from "../index";
 import useGitData from "../../hooks/useGitData";
+import {addRepos} from "../../store/gitdataSlice"
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 export default function Content() {
   const data = useGitData({ user: "imA05-in" });
@@ -12,7 +15,13 @@ export default function Content() {
     "OAuth2",
     "ThemeSwitcher",
   ];
-  const newData = data.filter((item) => !unwantedProjs.includes(item.name));
+  const newData = data.filter((item) => !unwantedProjs.includes(item.name))
+
+  const dispatch = useDispatch()
+  
+  useEffect(()=>{
+    dispatch(addRepos({repos: newData}))
+  },[newData])
 
   return (
     <div className="flex flex-col gap-10 w-full px-2">
@@ -23,12 +32,11 @@ export default function Content() {
       />
 
       {/* work */}
-      <div className="flex flex-col gap-10" id="work">
+      <div className="flex flex-col gap-10 ">
         <h2 className="font-medium text-xl">Work</h2>
         {newData.map((item) => (
           <div key={item.name} className="pt-6">
             <ProjectCard
-              // thumbnail={``}
               title={item.name}
               btnLable={item.name}
               description={item.description}
