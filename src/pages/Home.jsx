@@ -3,7 +3,7 @@ import useGitData from "../hooks/useGitData";
 
 export default function Home() {
   return(
-    <div>
+    <div className="max-w-7xl">
       <Content/>
     </div>
   )
