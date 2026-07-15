@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, ContactBtn } from "../index";
 import { div, nav } from "motion/react-client";
+import { NavLink } from "react-router";
 
 export default function NavBar() {
   const [showMobMenu, setShowMobMenu] = useState(false);
@@ -9,9 +10,9 @@ export default function NavBar() {
     <header className="w-full">
       <div className="bg-[#FFFDFB] flex justify-between  px-2 py-1 items-center w-full border-b">
         {/* logo */}
-        <div>
+        <NavLink to={`/`}>
           <p className="font-extrabold text-xl">Pawarya</p>
-        </div>
+        </NavLink>
         {/* desktop menu */}
         <div className="items-center justify-between hidden md:flex md:gap-10 lg:gap-20 py-2">
           <div>Case studies</div>
