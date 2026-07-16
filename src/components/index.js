@@ -9,7 +9,8 @@ import ProjectCard from "./ProjectCard/ProjectCard"
 import SkillList from "./SkillList/SkillList"
 import ContactBtn from "./ContactBtn/ContactBtn.jsx"
 import GithubBtn from "./GithubBtn/GithubBtn.jsx"
-
+import TextBlock from "./HeroComponents/TextBlock/TextBlock.jsx"
+import Quote from "./HeroComponents/Quote/Quote.jsx"
 export {
     Button,
     Content,
@@ -21,6 +22,9 @@ export {
     ProjectCard,
     SkillList,
     ContactBtn,
-    GithubBtn
+    GithubBtn,
+    TextBlock,
+    Quote,
+    
 
 }
