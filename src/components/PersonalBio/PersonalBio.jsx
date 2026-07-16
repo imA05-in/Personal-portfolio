@@ -9,7 +9,7 @@ export default function PersonalBio({
   return (
     <div className="w-full py-1 flex flex-col gap-4">
       {/* Profile Image */}
-      <div className="rounded-full">
+      <div className="rounded-full size-20 bg-white">
         <img
           src={img}
           alt="img"
