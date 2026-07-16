@@ -15,7 +15,9 @@ export default function NavBar() {
     <header className="w-full sticky top-0 z-10">
       <div className="bg-[#FFFDFB] flex justify-between  px-2 py-1 items-center w-full border-b">
         {/* logo */}
-        <NavLink to={`/`}>
+        <NavLink 
+        onClick={()=>setShowMobMenu(false)}
+        to={`/`}>
           <p className="font-extrabold text-xl">Pawarya</p>
         </NavLink>
         {/* desktop menu */}
@@ -49,7 +51,11 @@ export default function NavBar() {
         className={`${showMobMenu === true ? "flex flex-col" : "hidden"} md:hidden gap-4 items-end px-2 py-4`}
       >
         {navItems.map((item)=>(
-            <NavLink key={item.label} to={item.path}>
+            <NavLink 
+            key={item.label} 
+            to={item.path}
+            onClick={()=>setShowMobMenu(false)}
+            >
               {item.label}
             </NavLink>
           ))}
