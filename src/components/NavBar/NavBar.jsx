@@ -12,7 +12,7 @@ export default function NavBar() {
      }
   ]
   return (
-    <header className="w-full sticky top-0">
+    <header className="w-full sticky top-0 z-10">
       <div className="bg-[#FFFDFB] flex justify-between  px-2 py-1 items-center w-full border-b">
         {/* logo */}
         <NavLink to={`/`}>
