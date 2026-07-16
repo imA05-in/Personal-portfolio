@@ -8,6 +8,7 @@ import Project from './pages/Project.jsx'
 import { useParams } from 'react-router'
 import {Provider} from "react-redux"
 import {store} from "./store/store.js"
+import socials from './pages/Socials.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:"/:slug",
         element:<Project/>
+      },
+      {
+        path:"/socials",
+        element:<socials/>
       }
     ]
   },
