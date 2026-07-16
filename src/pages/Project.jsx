@@ -19,7 +19,7 @@ export default function Project() {
   const quote = useReadmeData({ title: title, dirPath: "showcase/Quote" });
 
   return (
-    <div className="px-2 w-full flex flex-col items-center gap-10">
+    <div className="py-2 w-full flex flex-col items-center gap-10">
       <div className="w-full">
         <Hero text={title} Himg={img} />
       </div>

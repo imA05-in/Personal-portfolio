@@ -6,7 +6,7 @@ export default function Hero({ Himg = HeroImg, text="Hero text" }) {
       <img
         src={Himg}
         alt="img"
-        className=" max-h-70 object-cover opacity-20 w-full bg-black"
+        className=" max-h-70 lg:max-h-100 object-cover opacity-20 w-full bg-black"
       />
       <div className="absolute top-0 flex justify-center items-center w-full h-full ">
         <p className="md:text-6xl text-3xl font-bold opacity-80">{text}</p>
