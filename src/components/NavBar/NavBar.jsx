@@ -5,9 +5,14 @@ import { NavLink } from "react-router";
 
 export default function NavBar() {
   const [showMobMenu, setShowMobMenu] = useState(false);
-  const navItems = [{ label: "projects", path: "" }]
+  const navItems = [
+    { 
+      label: "socials", 
+      path: "/socials",
+     }
+  ]
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0">
       <div className="bg-[#FFFDFB] flex justify-between  px-2 py-1 items-center w-full border-b">
         {/* logo */}
         <NavLink to={`/`}>
@@ -15,7 +20,11 @@ export default function NavBar() {
         </NavLink>
         {/* desktop menu */}
         <div className="items-center justify-between hidden md:flex md:gap-10 lg:gap-20 py-2">
-          <div>Case studies</div>
+          {navItems.map((item)=>(
+            <NavLink key={item.label} to={item.path}>
+              {item.label}
+            </NavLink>
+          ))}
           <div>
             <ContactBtn
               href="mailto:abhishek29112005@gmail.com"
@@ -39,7 +48,11 @@ export default function NavBar() {
       <div
         className={`${showMobMenu === true ? "flex flex-col" : "hidden"} md:hidden gap-4 items-end px-2 py-4`}
       >
-        <div onClick={()=>(setShowMobMenu(false), document.getElementById("work").scrollIntoView({behavior:"smooth"}))}  >Case studies</div>
+        {navItems.map((item)=>(
+            <NavLink key={item.label} to={item.path}>
+              {item.label}
+            </NavLink>
+          ))}
         <div>
           <ContactBtn
             href="mailto:abhishek29112005@gmail.com"
