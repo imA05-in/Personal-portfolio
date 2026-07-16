@@ -12,11 +12,13 @@ export default function ProjectCard({
   gitLink,
 }) {
 
+  const img = `https://raw.githubusercontent.com/imA05-in/${title}/main/showcase/Images/screenshots/0.png`
   return (
+    <a href={img} target="_blank">
     <div className="flex md:flex-row flex-col gap-2">
       {/* thumbnail */}
       <div className="max-w-100 ">
-        <img src={`https://raw.githubusercontent.com/imA05-in/${title}/main/showcase/Images/screenshots/0.png`} alt="" className="rounded" />
+        <img src={img} alt="" className="rounded" />
       </div>
       {/* desciption */}
       <div className="flex flex-col justify-between py-2 md:px-4 gap-2 w-full">
@@ -42,5 +44,6 @@ export default function ProjectCard({
           </div>
       </div>
     </div>
+    </a>
   );
 }
