@@ -8,6 +8,7 @@ function App() {
       <main className="flex-1 flex flex-col items-center w-full ">
         <Outlet/>
       </main>
+      <SkillList/>
       <Footer/>
     </div>
   );
