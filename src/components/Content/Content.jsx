@@ -1,21 +1,24 @@
 import { PersonalBio, ProjectCard } from "../index";
 import useGitData from "../../hooks/useGitData";
 import {addRepos} from "../../store/gitdataSlice"
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useDispatch } from "react-redux";
 
+const unwantedProjs = [
+  "06-todo",
+  "07BasicSite",
+  "08contextApi",
+  "10TodoContextLocal",
+  "OAuth2",
+  "ThemeSwitcher",
+];
 export default function Content() {
   const data = useGitData({ user: "imA05-in" });
   // filter unwanted
-  const unwantedProjs = [
-    "06-todo",
-    "07BasicSite",
-    "08contextApi",
-    "10TodoContextLocal",
-    "OAuth2",
-    "ThemeSwitcher",
-  ];
-  const newData = data.filter((item) => !unwantedProjs.includes(item.name))
+  const newData = useMemo(()=>{
+    if(!Array.isArray(data)) return [];
+    return data.filter((item) => !unwantedProjs.includes(item.name))
+  },[data])
 
   const dispatch = useDispatch()
   
